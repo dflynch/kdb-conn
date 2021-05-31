@@ -1,0 +1,8 @@
+#!/bin/sh
+
+for f in tst/*; do
+  [ -e $f ] || continue
+  if ! q $f; then
+    exit 1
+  fi
+done
